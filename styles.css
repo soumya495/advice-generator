@@ -63,12 +63,26 @@ body {
   place-items: center;
   cursor: pointer;
   transition: all 200ms ease;
+  border: none;
+  outline: none;
 }
 
 .btn:hover {
   box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
   -webkit-box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
   -moz-box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+}
+
+.btn:focus {
+  outline: 2px solid black;
+
+  box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+  -webkit-box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+  -moz-box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+}
+
+.btn:active {
+  transform: scale(0.9) translateX(-50%);
 }
 
 /* rotate dice while fetching data */
@@ -83,5 +97,21 @@ body {
   }
   to {
     -webkit-transform: rotate(359deg);
+  }
+}
+
+.divider-pattern-desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .divider-pattern-mobile {
+    display: none;
+  }
+  .divider-pattern-desktop {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
   }
 }
