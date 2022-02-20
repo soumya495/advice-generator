@@ -35,19 +35,34 @@ body {
   padding: 2.5rem 1rem;
   border-radius: 1rem;
   padding-bottom: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .advice-number {
+  width: 100%;
   font-size: 0.5rem;
   text-transform: uppercase;
   color: var(--pm-neon-green);
   letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .advice-text {
   font-size: 1.75rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  display: block;
+}
+
+.num {
+  display: block;
+}
+
+.hide-text {
+  display: none;
 }
 
 .btn {
@@ -114,7 +129,71 @@ body {
 }
 
 .attribution a {
-  color: var(--pm-neon-green);
+  color: var(--pm-neon-green) !important;
+}
+
+.skeleton-body {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  margin-block: 1rem;
+}
+
+.show-skeleton {
+  display: block !important;
+}
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-green {
+  display: none;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 0.85rem;
+  margin-block: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.25rem;
+}
+
+.skeleton-green {
+  width: 2rem !important;
+  height: 0.75rem;
+  margin: 0;
+  margin-left: 0.25rem;
+  animation: skeleton-loading-green 1s linear infinite alternate;
+}
+
+.skeleton-text:nth-child(2) {
+  width: 90%;
+}
+
+.skeleton-text:last-child {
+  width: 80%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+@keyframes skeleton-loading-green {
+  0% {
+    background-color: hsl(150, 100%, 66%);
+  }
+
+  100% {
+    background-color: hsl(150, 100%, 86%);
+  }
 }
 
 @media (min-width: 600px) {
