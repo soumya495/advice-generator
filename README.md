@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Output
 
-![](./screenshot/Advice-Generator.gif)
+![](./screenShot/Advice-Generator.gif)
 
 ## My process
 
