@@ -20,5 +20,68 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: var(--nt-gr-blue);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
   background-color: var(--nt-dk-blue);
+  color: var(--pm-lt-cyan);
+  padding: 2.5rem 1rem;
+  border-radius: 1rem;
+  padding-bottom: 3rem;
+}
+
+.advice-number {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  color: var(--pm-neon-green);
+  letter-spacing: 2px;
+}
+
+.advice-text {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--pm-neon-green);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+  -webkit-box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+  -moz-box-shadow: 2px 2px 64px 5px var(--pm-neon-green);
+}
+
+/* rotate dice while fetching data */
+
+.loading-dice {
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
 }
